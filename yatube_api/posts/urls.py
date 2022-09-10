@@ -11,7 +11,8 @@ app_name = 'posts'
 router = DefaultRouter()
 
 router.register('api/v1/posts', PostViewSet)
-router.register(r'api/v1/posts/(?P<post_id>\d+)/comments', CommentViewSet, basename='posts')
+router.register(r'api/v1/posts/(?P<post_id>\d+)/comments',
+                CommentViewSet, basename='posts')
 router.register('api/v1/groups', GroupViewSet)
 
 urlpatterns = [

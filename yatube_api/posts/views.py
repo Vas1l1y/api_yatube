@@ -1,4 +1,3 @@
-import requests
 from rest_framework import viewsets
 from rest_framework.exceptions import PermissionDenied
 
@@ -26,9 +25,6 @@ class PostViewSet(viewsets.ModelViewSet):
 
 class CommentViewSet(viewsets.ModelViewSet):
     serializer_class = CommentSerializer
-    # queryset во вьюсете не указываем
-    # Нам тут нужны не все комментарии, а только связанные с постом с id=post_id
-    # Поэтому нужно переопределить метод get_queryset и применить фильтр
 
     def get_queryset(self):
         # Получаем id поста из эндпоинта
