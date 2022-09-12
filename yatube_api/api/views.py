@@ -1,6 +1,6 @@
 from rest_framework import viewsets
 from rest_framework.exceptions import PermissionDenied
-from posts.models import Post, Group, Comment
+from posts.models import Post, Group
 
 from django.shortcuts import get_object_or_404
 
